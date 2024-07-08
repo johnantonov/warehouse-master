@@ -28,6 +28,13 @@ a {
   opacity: 0.6;
 }
 
+button {
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+button:active {
+  transform: scale(0.98);
+}
+
 
 .mar-t-4 {
   margin-top: 4px;

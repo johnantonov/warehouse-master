@@ -23,6 +23,7 @@ export default function Home() {
 
   const [showScanner, setShowScanner] = useState(false);
   const [scannedCodes, setScannedCodes] = useState([]);
+
   const [isLoadingPostCodes, setIsLoadingPostCodes] = useState(false);
 
   const handleScan = useCallback((code) => {
@@ -34,6 +35,8 @@ export default function Home() {
   const handleDelete = (index) => {
     setScannedCodes(prevCodes => prevCodes.filter((_, i) => i !== index));
   };
+
+
   const handleSend = async () => {
     if (scannedCodes.length < 1) {
       alert('Нет отсканированных штрихкодов!')
@@ -53,7 +56,7 @@ export default function Home() {
     }
   };
 
-  const endpoint = 'https://script.google.com/macros/s/AKfycbyaFftL2XzduHU49JOlhCu0KNEbGVj_eo6o31O1L6SQoD6oUmil_M1PRTYz7ZMVK8-tSQ/exec';
+  const endpoint = 'https://script.google.com/macros/s/AKfycbxZ9bkPAwTpsgWIT9BkL63nfNfGP4TUY8FXz7GfWhciZcMnToiLzOBeq82zuj_ItFOXQQ/exec';
 
   return !isCheckingAuth ? (
     <div>
